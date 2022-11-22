@@ -1,14 +1,13 @@
 package com.abedkhan.facebookui;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 
+import com.abedkhan.facebookui.Fragment.HomeFragmentAdapter;
 import com.abedkhan.facebookui.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
@@ -18,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 List<Storymodel>storylist;
 List<Postmodel>postmodelList;
+FragmentManager fragmentManager;
+HomeFragmentAdapter homeFragmentAdapter;
 RecyclerView storyrecyclerview,postrecyclerview;
 
 
@@ -28,10 +29,14 @@ RecyclerView storyrecyclerview,postrecyclerview;
         setContentView(binding.getRoot());
 
 
-        binding.profile.setOnClickListener(view -> {
-            Intent profileintent =new Intent(MainActivity.this,Myprofile.class);
-            startActivity(profileintent);
-        });
+//        binding.profile.setOnClickListener(view -> {
+//            Intent profileintent =new Intent(MainActivity.this,Myprofile.class);
+//            startActivity(profileintent);
+//        });
+//Toolbar toolbar=findViewById(R.id.mytoolbar1);
+//setSupportActionBar(toolbar);
+
+fragmentsetup();
 
 
 
@@ -43,30 +48,48 @@ RecyclerView storyrecyclerview,postrecyclerview;
 
 
 
+//
+//storyrecyclerview=findViewById(R.id.storyRecyclerview);
+//postrecyclerview=findViewById(R.id.postrecyclerview);
+//
+//storylist=new ArrayList<>();
+//postmodelList=new ArrayList<>();
+//
+//storyarraydata();
+//postarraylist();
+//
+//StoryAdapter storyAdapter=new StoryAdapter(storylist,MainActivity.this);
+//storyrecyclerview.setAdapter(storyAdapter);
+//
+//
+//Postadapter postadapter=new Postadapter(postmodelList,MainActivity.this);
+//postrecyclerview.setAdapter(postadapter);
+
+    }
+
+    private void fragmentsetup() {
+
+        fragmentManager =getSupportFragmentManager();
+        homeFragmentAdapter =new HomeFragmentAdapter(fragmentManager,101);
+        binding.viewpager.setAdapter(homeFragmentAdapter);
+
+        binding.tablayout.setupWithViewPager(binding.viewpager);
+
+        binding.tablayout.getTabAt(0).setIcon(R.drawable.ic_baseline_home_24);
+        binding.tablayout.getTabAt(1).setIcon(R.drawable.ic_baseline_people_outline_24);
+        binding.tablayout.getTabAt(2).setIcon(R.drawable.ic_baseline_ondemand_video_24);
+        binding.tablayout.getTabAt(3).setIcon(R.drawable.ic_baseline_storefront_24);
+        binding.tablayout.getTabAt(4).setIcon(R.drawable.ic_baseline_notifications_none_24);
+        binding.tablayout.getTabAt(5).setIcon(R.drawable.ic_baseline_ondemand_video_24);
 
 
 
 
-storyrecyclerview=findViewById(R.id.storyRecyclerview);
-postrecyclerview=findViewById(R.id.postrecyclerview);
-
-storylist=new ArrayList<>();
-postmodelList=new ArrayList<>();
-
-storyarraydata();
-postarraylist();
-
-StoryAdapter storyAdapter=new StoryAdapter(storylist,MainActivity.this);
-storyrecyclerview.setAdapter(storyAdapter);
-
-
-Postadapter postadapter=new Postadapter(postmodelList,MainActivity.this);
-postrecyclerview.setAdapter(postadapter);
 
     }
 
 
-//post array list
+    //post array list
     private void postarraylist() {
 
 

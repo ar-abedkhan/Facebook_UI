@@ -21,16 +21,28 @@
             >
 
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="facebook"
+    android:textStyle="bold"
+    android:textColor="@color/facebookTitleColor"
+
+    android:layout_marginStart="15dp"
+    android:textSize="28sp"
+    />
 
 
-            <ImageView
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/facebooktext"
-                android:layout_gravity="start"
-                />
+<!--            <ImageView-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                android:layout_width="160dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/facebooktext"-->
+<!--                android:layout_gravity="start"-->
+<!--                />-->
 
 
 

@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 import com.abedkhan.facebookui.R;
 
-public class HomeFragment extends Fragment {
+public class NotificationFragment extends Fragment {
 
-    public HomeFragment() {
-
+    public NotificationFragment() {
+        // Required empty public constructor
     }
 
 
@@ -21,7 +21,6 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_notification, container, false);
     }
 }

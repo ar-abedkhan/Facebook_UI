@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebooktext"
+                android:layout_gravity="start"
+                />
+
+
+
+            <ImageView
+                android:background="@drawable/circle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/messenger"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_gravity="center"
+
+                />
+
+
+
+            <ImageView
+                android:background="@drawable/circle"
+                android:id="@+id/messenger"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/messenger"
+                android:layout_gravity="center"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+
+<!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    android:layout_width="370dp"-->
+<!--    android:layout_height="match_parent"-->
+<!--    app:menu="@menu/topmenu_likebottom"-->
+<!--    android:id="@+id/mymenu"-->
+<!--/>-->
+
+<!--                <ImageView-->
+<!--            app:layout_constraintStart_toEndOf="@id/mymenu"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_width="30sp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:src="@drawable/ic_baseline_menu_24" />-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

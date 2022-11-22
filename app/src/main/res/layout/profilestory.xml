@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="160dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    android:background="#12000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#12000000"
+
+    >
+
+
+
+    <ImageView
+        android:background="#12000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profilestory"
+        android:src="@drawable/test"
+        />
+    <TextView
+        android:id="@+id/totalimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+7"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:padding="5dp"
+        android:layout_marginTop="-40dp"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="My pic"
+    android:id="@+id/storytitle"
+    android:layout_gravity="center"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+    />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dp"
+    android:layout_height="190dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/storyupload"
+        android:src="@drawable/test"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2F000000"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/myimg"
+            android:padding="7dp"
+            android:id="@+id/idprofile"
+            android:layout_gravity="start"
+            app:civ_border_overlay="true"
+            />
+
+
+        <TextView
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id name"
+            android:textColor="#FFFFFF"
+            android:id="@+id/idname"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

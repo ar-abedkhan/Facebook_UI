@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opening_Screen">
+
+
+
+
+    <ImageView
+        android:id="@+id/img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30sp"
+        android:src="@drawable/facebook"
+        />
+
+
+    <TextView
+        android:id="@+id/from"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from"
+        android:textSize="15dp"
+        android:layout_marginBottom="-100dp"
+        />
+
+
+<LinearLayout
+    android:layout_marginTop="-55dp"
+    android:id="@+id/linear"
+    app:layout_constraintTop_toBottomOf="@id/from"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:orientation="horizontal"
+    android:gravity="center"
+    >
+
+
+    <ImageView
+            android:padding="5dp"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/meta"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meta"
+        android:textColor="#0163E0"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

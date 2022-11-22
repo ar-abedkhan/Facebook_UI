@@ -28,10 +28,10 @@ RecyclerView storyrecyclerview,postrecyclerview;
         setContentView(binding.getRoot());
 
 
-//        binding.pro.setOnClickListener(view -> {
-//            Intent profileintent =new Intent(MainActivity.this,Myprofile.class);
-//            startActivity(profileintent);
-//        });
+        binding.profile.setOnClickListener(view -> {
+            Intent profileintent =new Intent(MainActivity.this,Myprofile.class);
+            startActivity(profileintent);
+        });
 
 
 

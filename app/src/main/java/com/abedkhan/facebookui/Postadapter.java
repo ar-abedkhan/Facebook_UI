@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -17,7 +18,7 @@ public class Postadapter extends RecyclerView.Adapter<PostViewholder> {
     List<Postmodel> postlist;
     Context context;
 
-    public Postadapter(List<Postmodel> postlist, Context context) {
+    public Postadapter(List<Postmodel> postlist, FragmentActivity context) {
         this.postlist = postlist;
         this.context = context;
     }

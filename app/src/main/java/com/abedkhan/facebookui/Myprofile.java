@@ -53,12 +53,6 @@ postarraylist();
     }
 
 
-
-
-
-
-
-
     //post array list
     private void postarraylist() {
 

@@ -31,6 +31,7 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter {
             case 5:
                 return new DrawerMenuFragment();
         }
+
         return null;
     }
 

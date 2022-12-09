@@ -8,59 +8,72 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.abedkhan.facebookui.Adapters.FriendReqAdapter;
+import com.abedkhan.facebookui.Models.FriendModel;
 import com.abedkhan.facebookui.R;
+import com.abedkhan.facebookui.Storymodel;
+import com.abedkhan.facebookui.databinding.FragmentFriendrequestBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FriendrequestFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class FriendrequestFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public FriendrequestFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FriendrequestFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FriendrequestFragment newInstance(String param1, String param2) {
-        FriendrequestFragment fragment = new FriendrequestFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    FragmentFriendrequestBinding binding;
+List<FriendModel>friendModelList;
+
+
+
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_friendrequest, container, false);
+        binding=FragmentFriendrequestBinding.inflate(getLayoutInflater(),container,false);
+friendModelList=new ArrayList<>();
+friendreqData();
+
+        FriendReqAdapter friendReqAdapter=new FriendReqAdapter(friendModelList,requireContext());
+        binding.froendReqRecycler.setAdapter(friendReqAdapter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        return binding.getRoot();
+    }
+
+    private void friendreqData() {
+
+        friendModelList.add(new FriendModel("2 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9W5wKFJz73EYsMh58kD2Z2UGukbtvx5B-mg&usqp=CAU","Abed khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnZc4nu61fo87fwxBfVNGokRj1TP8t6IrdEQ&usqp=CAU"));
+        friendModelList.add(new FriendModel("22 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7f0AVeO0ZpL7PfUflnts_75mPZEm36sj4PQ&usqp=CAU","Abir khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSc-y8_bKQCV9PQy2D1SZkA4Yb4bOewjw3A&usqp=CAU"));
+        friendModelList.add(new FriendModel("7 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnZc4nu61fo87fwxBfVNGokRj1TP8t6IrdEQ&usqp=CAU","Md khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9W5wKFJz73EYsMh58kD2Z2UGukbtvx5B-mg&usqp=CAU"));
+        friendModelList.add(new FriendModel("89 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHfXdo_W1l7Jcm0LAi5EmB2oMT3mrfgxmAA&usqp=CAU","Nazmul khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPOoZOWOD3oOnaevjLT4VR5-T8jG8uPEvByg&usqp=CAU"));
+        friendModelList.add(new FriendModel("94 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJWtKYksMR7gxxGS65hfBeJc97hf0UxwPqg&usqp=CAU","Juyel Raj","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7f0AVeO0ZpL7PfUflnts_75mPZEm36sj4PQ&usqp=CAU"));
+        friendModelList.add(new FriendModel("6 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Db_rqnoHx4JMQ_C5IbAbrXlohbP8TwQ2Lw&usqp=CAU","Faria khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfR2dE6NIMeFTPbHNRTKWLXS9G9OYp6zRRg&usqp=CAU"));
+        friendModelList.add(new FriendModel("1 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8J1l-rceZJyefqnMdLtIaqX2q72MoEZJJ4Q&usqp=CAU","Farha islam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRrabli-wbpRCyzD1Wvma9YI4dtUYZ0rNC9FFmbk4pws08F6GZMv1Fj4MeXbmk0bU8GYo&usqp=CAU"));
+        friendModelList.add(new FriendModel("1 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSc-y8_bKQCV9PQy2D1SZkA4Yb4bOewjw3A&usqp=CAU","Anabiya Rahman","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8J1l-rceZJyefqnMdLtIaqX2q72MoEZJJ4Q&usqp=CAU"));
+        friendModelList.add(new FriendModel("42 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPOoZOWOD3oOnaevjLT4VR5-T8jG8uPEvByg&usqp=CAU","Joy khan","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Db_rqnoHx4JMQ_C5IbAbrXlohbP8TwQ2Lw&usqp=CAU"));
+        friendModelList.add(new FriendModel("102 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfR2dE6NIMeFTPbHNRTKWLXS9G9OYp6zRRg&usqp=CAU","Bablu Mia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHfXdo_W1l7Jcm0LAi5EmB2oMT3mrfgxmAA&usqp=CAU"));
+        friendModelList.add(new FriendModel("3 Mutual friends","Confirm","Delete","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRrabli-wbpRCyzD1Wvma9YI4dtUYZ0rNC9FFmbk4pws08F6GZMv1Fj4MeXbmk0bU8GYo&usqp=CAU","Md A.k Rahman","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJWtKYksMR7gxxGS65hfBeJc97hf0UxwPqg&usqp=CAU"));
+
     }
 }

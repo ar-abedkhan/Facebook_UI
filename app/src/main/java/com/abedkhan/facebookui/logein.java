@@ -39,6 +39,7 @@ if (binding.mailORnumber.equals("")&& binding.pass.equals("")){
             binding.cover.setVisibility(View.GONE);
             binding.language.setVisibility(View.GONE);
             binding.or.setVisibility(View.GONE);
+            binding.forgetPassbutton.setVisibility(View.GONE);
             binding.createnewaccountButton.setVisibility(View.GONE);
         });
 

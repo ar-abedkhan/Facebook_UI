@@ -3,12 +3,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".Fragment.FriendrequestFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="50dp"
+        >
+
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Friends"
+            android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/friendtitle"
+        />
+
+    <ImageView
+        android:background="@drawable/circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_baseline_search_24"
+        android:layout_gravity="center"
+        android:id="@+id/search"
+
+        />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/friendtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Suggestions"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="3dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:background="@drawable/hobbeybk"
+            android:id="@+id/suggestion"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/friendtitle"
+            app:layout_constraintStart_toEndOf="@id/suggestion"
+            android:text="Your Friends"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="3dp"
+            android:padding="5dp"
+            android:background="@drawable/hobbeybk"
+            android:id="@+id/yourfriends"
+            />
+
+        <View
+            android:id="@+id/layout2"
+            app:layout_constraintTop_toBottomOf="@id/suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#1E000000"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Friend Request"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/friendreq"
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout2"
+            app:layout_constraintStart_toEndOf="@id/friendreq"
+            android:text="1047"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/friendreqcount"
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="See All"
+            android:textSize="20sp"
+            android:paddingTop="5dp"
+            android:textColor="@color/purple_500"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/seeAll"
+            />
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/friendreq"
+    android:paddingTop="8dp"
+    tools:listitem="@layout/friendsdesign"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:id="@+id/froendReqRecycler"
+    />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

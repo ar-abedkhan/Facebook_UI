@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.abedkhan.facebookui.Fragment.FriendrequestFragment;
 import com.abedkhan.facebookui.Fragment.HomeFragmentAdapter;
 import com.abedkhan.facebookui.databinding.ActivityMainBinding;
 
@@ -37,16 +38,6 @@ fragmentsetup();
 
 
 
-
-
-
-
-
-
-
-
-
-
     }
 
     private void fragmentsetup() {
@@ -62,7 +53,7 @@ fragmentsetup();
         binding.tablayout.getTabAt(2).setIcon(R.drawable.ic_baseline_ondemand_video_24);
         binding.tablayout.getTabAt(3).setIcon(R.drawable.ic_baseline_storefront_24);
         binding.tablayout.getTabAt(4).setIcon(R.drawable.ic_baseline_notifications_none_24);
-        binding.tablayout.getTabAt(5).setIcon(R.drawable.ic_baseline_ondemand_video_24);
+        binding.tablayout.getTabAt(5).setIcon(R.drawable.user);
 
 
 

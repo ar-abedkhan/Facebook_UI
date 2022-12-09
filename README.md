@@ -47,6 +47,12 @@
 
 
 
+<p align = "center">
+<h2> friend request </h2>
+<br><br>
+<img src ="https://user-images.githubusercontent.com/118797428/206741882-3c4cb9b3-40b9-4fcb-8450-f02b25891520.jpg" height = "400" weight = "300"/>
+</p>
+
 
 <p align = "center">
 <h2> Profile (Section-1) </h2>
